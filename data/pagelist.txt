@@ -1,0 +1,40 @@
+{
+  "pages": [
+    {
+      "id": 0,
+      "title": "Splash",
+      "filename": "index",
+      "layout": "one"
+    },
+    {
+      "id": 1,
+      "title": "Main Menu",
+      "filename": "pages/mainMenu",
+      "layout": "two"
+    },
+    {
+      "id": 2,
+      "title": "Capabilities Home",
+      "filename": "pages/capabilities/index",
+      "layout": "three"
+    },
+    {
+      "id": 3,
+      "title": "Capabilities One",
+      "filename": "pages/capabilities/one",
+      "layout": "three"
+    },
+    {
+      "id": 4,
+      "title": "Products Home",
+      "filename": "pages/products/index",
+      "layout": "three"
+    },
+    {
+      "id": 5,
+      "title": "Products One",
+      "filename": "pages/products/one",
+      "layout": "three"
+    }
+  ]
+}

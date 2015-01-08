@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "id": 0,
+      "title": "Splash",
+      "filename": "index",
+      "layout": "one"
+    },
+    {
+      "id": 1,
+      "title": "Main Menu",
+      "filename": "Views/mainMenu",
+      "layout": "two"
+    },
+    {
+      "id": 2,
+      "title": "Capabilities Home",
+      "filename": "Views/capabilities/index",
+      "layout": "three"
+    },
+    {
+      "id": 3,
+      "title": "Capabilities One",
+      "filename": "Views/capabilities/one",
+      "layout": "three"
+    },
+    {
+      "id": 4,
+      "title": "Products Home",
+      "filename": "Views/products/index",
+      "layout": "three"
+    },
+    {
+      "id": 5,
+      "title": "Products One",
+      "filename": "Views/products/one",
+      "layout": "three"
+    },
+    {
+      "id": 6,
+      "title": "Markets Home",
+      "filename": "Views/capabilities/index",
+      "layout": "three"
+    },
+    {
+      "id": 7,
+      "title": "Markets One",
+      "filename": "Views/capabilities/one",
+      "layout": "three"
+    }
+  ]
+}

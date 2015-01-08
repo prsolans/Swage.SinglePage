@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-sm-3"><h1 id="page-title"></h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.</p></div>
+    <div class="col-sm-9 ">
+        <div class="navigation-item"><img src="http://placehold.it/120x120"/><br/> <a onclick="load_page_info(7)">Item
+            1</a></div>
+    </div>
+</div>
+
+<div id="footer-menu" class="footer-menu-closed" data-role="footer" data-position="fixed">
+    <footer>
+        <p><a href="#" id="footer-menu-link">Markets</a></p>
+    </footer>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('a#footer-menu-link').click(function () {
+
+            if ($('#footer-menu').hasClass('footer-menu-closed')) {
+                $('#footer-menu').animate({'bottom': '200'}, 500);
+                $('#footer-menu').removeClass('footer-menu-closed');
+                $('#footer-menu').addClass('footer-menu-expanded');
+            }
+            else {
+                $('#footer-menu').animate({'bottom': '0'}, 500);
+                $('#footer-menu').removeClass('footer-menu-expanded');
+                $('#footer-menu').addClass('footer-menu-closed');
+            }
+        });
+
+    });
+</script>
+

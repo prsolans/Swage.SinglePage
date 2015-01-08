@@ -1,0 +1,139 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+p {
+    font-size: .8em;
+}
+
+.capabilities-intro {
+    margin-top: 0;
+}
+
+.container {
+    max-width: 100%;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+}
+
+.header-row {
+    height: 125px;
+}
+
+.markets-intro {
+    margin-top: 360px;
+}
+
+.navigation-item {
+    width: 150px;
+    border: 2px solid gray;
+    height: 150px;
+    float: left;
+}
+
+.navigation-item img {
+    border-radius: 79px;
+    padding: 5px;
+    margin: 0;
+}
+
+.products-intro {
+    margin-top: 180px;
+}
+
+.ribbon {
+    width: 100%;
+    height: 20%;
+    min-height: 180px;
+    vertical-align: middle;
+}
+
+.ribbon .capabilities-header {
+    background-color: darkseagreen;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    height: 180px;
+}
+
+.ribbon .capabilities-list {
+    background-color: darkseagreen;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+    height: 180px;
+}
+
+/* LANDING ANIMATIONS */
+.landing-animation {
+    background: blue;
+}
+
+.top-landing-overlay, .bottom-landing-overlay {
+    height: 38%;
+}
+
+.center-landing-overlay {
+    height: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/* MENU PAGE ANIMATIONS */
+
+.ribbon .capabilities-header, .ribbon .products-header, .ribbon .markets-header {
+    position: relative;
+    -webkit-animation: popInFromLeft .8s; /* Chrome, Safari, Opera */
+    animation: popInFromLeft .8s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes popInFromLeft {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* Standard syntax */
+@keyframes popInFromLeft {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* DEBUGGING - NOT UTILIZED FOR PRODUCTION CODE */
+
+.border {
+    border: 1px solid black;
+}
+
+.ofTest {
+    overflow-y: hidden;
+    overflow: auto;
+    height: 150px;
+    width: 1500px;
+    white-space: nowrap;
+}
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css">
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/vendor/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div data-role='page' data-pageid="0" id="page-container">
+
+    <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
+        <ul>
+            <li><a onclick='load_page_info(2)'>Capabilities</a></li>
+            <li><a onclick="load_page_info(4)">Products</a></li>
+            <li><a onclick="load_page_info(6)">Markets</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+    <div class='header-row' data-role='header' data-position='fixed'>
+        <a onclick="load_page_info(1)">LOGO - Swagelok {Location}</a><br/>
+        <a href='#sectionMenu' data-icon='bars' id='section-menu-button'>Menu</a>
+        <a id="autoplay-control" class="autoplay-off" onclick="run_autoplay(get_container_id())">Autoplay Off</a>
+    </div>
+
+    <div data-role='content' class='container body-content'>
+        <h1 id="page-title"></h1>
+        <a onclick="load_page_info(1)" class="ui-btn" id="view-content-button">View Content</a>
+
+        <div id="loaded-content"></div>
+    </div>
+</div>
+
+
+</div>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    $(document).ready(function () {
+        pageID = get_container_id();
+        load_page_info(pageID);
+    });
+</script>
+</body>
+</html>
