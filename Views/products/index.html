@@ -1,4 +1,49 @@
-<div class="row">
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/jquery.mobile.theme-1.4.5.css">
+    <link rel="stylesheet" href="../../css/jquery.mobile.structure-1.4.5.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/site.css">
+    <script src="../../js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../../js/vendor/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<!-- Add your site or application content here -->
+<div data-role='page' data-pageid="4" id="page-container" style="">
+
+    <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
+        <ul>
+            <li><a href="../capabilities/">Capabilities</a></li>
+            <li><a href="../products/">Products</a></li>
+            <li><a href="../markets/">Markets</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+    <div class='header-row' data-role='header' data-position='fixed'>
+        <a href="../mainMenu.html">LOGO - Swagelok {Location}</a><br/>
+        <a href='#sectionMenu' data-icon='bars' id='section-menu-button'>Menu</a>
+        <a id="autoplay-control" class="autoplay-off" onclick="run_autoplay(get_container_id())">Autoplay Off</a>
+    </div>
+    <!-- /header --><div class="row">
     <div class="col-sm-3"><h1 id="page-title"></h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -6,35 +51,29 @@
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
             nulla pariatur.</p></div>
     <div class="col-sm-9 ">
-        <div class="navigation-item"><img src="http://placehold.it/120x120"/><br/> <a onclick="load_page_info(5)">Item
+        <div class="navigation-item"><img src="http://placehold.it/120x120"/><br/> <a href="one.html">Item
             1</a></div>
     </div>
 </div>
 
-<div id="footer-menu" class="footer-menu-closed" data-role="footer" data-position="fixed">
-    <footer>
-        <p><a href="#" id="footer-menu-link">Products</a></p>
-    </footer>
+    <div id="footer-menu" class="footer-menu-closed" data-role="footer" data-position="fixed">
+        <footer>
+            <p><a href="#" id="footer-menu-link">Products</a></p>
+        </footer>
+    </div>
+
+
+
 </div>
-
+<script src="../../js/vendor/bootstrap.min.js"></script>
+<script src="../../js/plugins.js"></script>
+<script src="../../js/main.js"></script>
 <script>
-
     $(document).ready(function () {
-
-        $('a#footer-menu-link').click(function () {
-
-            if ($('#footer-menu').hasClass('footer-menu-closed')) {
-                $('#footer-menu').animate({'bottom': '200'}, 500);
-                $('#footer-menu').removeClass('footer-menu-closed');
-                $('#footer-menu').addClass('footer-menu-expanded');
-            }
-            else {
-                $('#footer-menu').animate({'bottom': '0'}, 500);
-                $('#footer-menu').removeClass('footer-menu-expanded');
-                $('#footer-menu').addClass('footer-menu-closed');
-            }
-        });
-
+        pageID = get_container_id();
+        load_page_info(pageID);
     });
 </script>
 
+</body>
+</html>

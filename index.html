@@ -6,7 +6,9 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
+<!--<html class="no-js" manifest="/untitled/cache.manifest.save"> &lt;!&ndash;<![endif]&ndash;&gt;-->
 <html class="no-js"> <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,21 +39,21 @@
 
     <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
         <ul>
-            <li><a onclick='load_page_info(2)'>Capabilities</a></li>
-            <li><a onclick="load_page_info(4)">Products</a></li>
-            <li><a onclick="load_page_info(6)">Markets</a></li>
+            <li><a href="Views/capabilities/">Capabilities</a></li>
+            <li><a href="Views/products/">Products</a></li>
+            <li><a href="Views/markets/">Markets</a></li>
         </ul>
     </div>
     <!-- /panel -->
     <div class='header-row' data-role='header' data-position='fixed'>
-        <a onclick="load_page_info(1)">LOGO - Swagelok {Location}</a><br/>
+        <a href="Views/mainMenu.html">LOGO - Swagelok {Location}</a><br/>
         <a href='#sectionMenu' data-icon='bars' id='section-menu-button'>Menu</a>
         <a id="autoplay-control" class="autoplay-off" onclick="run_autoplay(get_container_id())">Autoplay Off</a>
     </div>
 
     <div data-role='content' class='container body-content'>
         <h1 id="page-title"></h1>
-        <a onclick="load_page_info(1)" class="ui-btn" id="view-content-button">View Content</a>
+        <a href="Views/mainMenu.html" class="ui-btn" id="view-content-button">View Content</a>
 
         <div id="loaded-content"></div>
     </div>

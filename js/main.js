@@ -1,3 +1,24 @@
+$(document).ready(function () {
+
+    pageID = get_container_id();
+    load_page_info(pageID);
+
+    $('a#footer-menu-link').click(function () {
+
+        if ($('#footer-menu').hasClass('footer-menu-closed')) {
+            $('#footer-menu').animate({'bottom': '200'}, 500);
+            $('#footer-menu').removeClass('footer-menu-closed');
+            $('#footer-menu').addClass('footer-menu-expanded');
+        }
+        else {
+            $('#footer-menu').animate({'bottom': '0'}, 500);
+            $('#footer-menu').removeClass('footer-menu-expanded');
+            $('#footer-menu').addClass('footer-menu-closed');
+        }
+    });
+
+});
+
 /**
  * Get the ID of the page content
  * @returns int;
@@ -46,24 +67,19 @@ function get_autoplay_setting() {
  */
 function load_page_info(id) {
 
-    var filename = null;
-    var layout = null;
-    var title = null;
+    var filename;
+    var pageLayout;
+    var title;
 
-    $.ajax({
-        url: 'data/pagelist.json',
-        async: false,
-        dataType: 'json',
-        success: function (json) {
-            filename = json.pages[id].filename;
-            title = json.pages[id].title;
-            layout = json.pages[id].layout;
-        }
-    });
+    var page = get_page_details(id);
+
+    filename = page.filename;
+    pageLayout = page.layout;
+    title = page.title;
 
     // Set page layout
 
-    if (layout == 'one') {
+    if (pageLayout == 'one') {
         $('#section-menu-button').hide();
         $('#view-content-button').show();
         $('#loaded-content').hide();
@@ -81,7 +97,8 @@ function load_page_info(id) {
 
     // IF not the first page, load in html from Views folder
     if (id != 0) {
-        $('#loaded-content').load(filename + '.html');
+        //$('#loaded-content').load(filename + '.html');
+        //window.location = filename + '.html';
     }
 
     // AUTOPLAY SETTINGS
@@ -142,3 +159,21 @@ function stop_autoplay() {
     return false;
 }
 
+function get_page_details(id) {
+
+    var pagelist = '{ "pages": [ { "id": 0, "title": "Splash", "filename": "index", "layout": "one" },' +
+        '{ "id": 1, "title": "Main Menu", "filename": "Views/mainMenu", "layout": "two" },' +
+        '{ "id": 2, "title": "Capabilities Home", "filename": "Views/capabilities/index", "layout": "three" },' +
+        '{ "id": 3, "title": "Capabilities One", "filename": "Views/capabilities/one", "layout": "three" },' +
+        '{ "id": 4, "title": "Products Home", "filename": "Views/products/index", "layout": "three" },' +
+        '{ "id": 5, "title": "Products One", "filename": "Views/products/one", "layout": "three" },' +
+        '{ "id": 6, "title": "Markets Home", "filename": "Views/capabilities/index", "layout" : "three" },' +
+        '{ "id": 7,"title": "Markets One","filename": "Views/capabilities/one","layout": "three" }' +
+        ']}';
+
+    var select = JSON.parse(pagelist);
+
+    item = select.pages[id];
+
+    return item;
+}

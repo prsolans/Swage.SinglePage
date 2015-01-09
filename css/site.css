@@ -21,6 +21,9 @@ p {
     font-size: .8em;
 }
 
+#autoplay-control {
+    display: none;
+}
 .capabilities-intro {
     margin-top: 0;
 }
@@ -55,6 +58,9 @@ footer p {
     margin: 0;
 }
 
+#page-container {
+    /*background: url('/untitled/img/bg/capabilities.png') !important;*/
+}
 .products-intro {
     margin-top: 180px;
 }

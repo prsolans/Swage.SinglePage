@@ -1,28 +1,71 @@
-<div class="ribbon row">
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.theme-1.4.5.css">
+    <link rel="stylesheet" href="../css/jquery.mobile.structure-1.4.5.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/site.css">
+    <script src="../js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../js/vendor/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<!-- Add your site or application content here -->
+<div data-role='page' data-pageid="1" id="page-container">
+
+    <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
+        <ul>
+            <li><a href="capabilities/">Capabilities</a></li>
+            <li><a href="products/">Products</a></li>
+            <li><a href="markets/">Markets</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+    <div class='header-row' data-role='header' data-position='fixed'>
+        <a href="#">LOGO - Swagelok {Location}</a><br/>
+        <a href='#sectionMenu' data-icon='bars' id='section-menu-button'>Menu</a>
+        <a id="autoplay-control" class="autoplay-off" onclick="run_autoplay(get_container_id())">Autoplay Off</a>
+    </div>
+    <h1 id="page-title"></h1>
+    <!-- /header --><div class="ribbon row">
     <div class="capabilities-header col-sm-3">
-        <a onclick='load_page_info(2)'>Capabilities</a>
+        <a href='capabilities/'>Capabilities</a>
     </div>
     <div class="capabilities-list col-sm-9">
-        <div class="row ofTest">
-            <div class="navigation-item"><img src="http://placehold.it/120x120"/><br/><a onclick="load_page_info(3)">Item
-                1</a></div>
-            <div class="navigation-item">2</div>
-            <div class="navigation-item">3</div>
-            <div class="navigation-item">4</div>
-            <div class="navigation-item">5</div>
-            <div class="navigation-item">6</div>
-            <div class="navigation-item">7</div>
-            <div class="navigation-item">8</div>
+        <div class="row">
+            <div class="col-sm-2"><a href="capabilities/one.html">Item 1</a></div>
+            <div class="col-sm-2">Item</div>
+            <div class="col-sm-2">Item</div>
+            <div class="col-sm-2">Item</div>
+            <div class="col-sm-2">Item</div>
+            <div class="col-sm-2">Item</div>
         </div>
     </div>
 </div>
 <div class="ribbon row">
     <div class="products-header col-sm-3">
-        <a onclick="load_page_info(4)">PRODUCTS</a>
+        <a href="products/">PRODUCTS</a>
     </div>
     <div class="products-list col-sm-9">
         <div class="row">
-            <div class="col-sm-2"><a onclick="load_page_info(5)">Item 1</a></div>
+            <div class="col-sm-2"><a href="products/one.html">Item 1</a></div>
             <div class="col-sm-2">Item</div>
             <div class="col-sm-2">Item</div>
             <div class="col-sm-2">Item</div>
@@ -33,11 +76,11 @@
 </div>
 <div class="ribbon row">
     <div class="markets-header col-sm-3">
-        <a href="Markets">MARKETS</a>
+        <a href="markets/">MARKETS</a>
     </div>
     <div class="markets-list col-sm-9">
         <div class="row">
-            <div class="col-sm-2">Item</div>
+            <div class="col-sm-2"><a href="markets/one.html">Item 1</a></div>
             <div class="col-sm-2">Item</div>
             <div class="col-sm-2">Item</div>
             <div class="col-sm-2">Item</div>
@@ -46,3 +89,18 @@
         </div>
     </div>
 </div>
+
+
+
+</div>
+<script src="../js/vendor/bootstrap.min.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        pageID = get_container_id();
+        load_page_info(pageID);
+    });
+</script>
+</body>
+</html>
